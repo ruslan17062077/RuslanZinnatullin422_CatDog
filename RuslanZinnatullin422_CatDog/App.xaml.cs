@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RuslanZinnatullin422_CatDog.DataBase;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +14,7 @@ namespace RuslanZinnatullin422_CatDog
     /// </summary>
     public partial class App : Application
     {
+        public static RuslanZinnatullin422_CatDogEntities db = new RuslanZinnatullin422_CatDogEntities();
+
     }
 }

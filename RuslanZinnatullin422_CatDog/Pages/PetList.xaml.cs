@@ -23,16 +23,33 @@ namespace RuslanZinnatullin422_CatDog.Pages
         public PetList()
         {
             InitializeComponent();
+            Poisk();
         }
 
         private void poisk_TextChanged(object sender, TextChangedEventArgs e)
         {
+
+            Poisk();
+
+
 
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+        public void Poisk()
+        {
+            if (poisk.Text.Length != 0)
+            {
+                PsinaData.ItemsSource = null;
+                PsinaData.ItemsSource = App.db.Pet.Where(x => x.Description.ToLower().Contains(poisk.Text.ToLower())).ToList();
+            }
+            else
+            {
+                PsinaData.ItemsSource = App.db.Pet.ToList();
+            }
         }
     }
 }
