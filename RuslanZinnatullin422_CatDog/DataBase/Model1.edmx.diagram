@@ -4,11 +4,11 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="e9dc74b089d54f28ad414369eb65ba56" Name="Diagram1">
-        <EntityTypeShape EntityType="RuslanZinnatullin422_CatDogModel.Pet" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="RuslanZinnatullin422_CatDogModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="RuslanZinnatullin422_CatDogModel.User" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
-        <AssociationConnector Association="RuslanZinnatullin422_CatDogModel.FK_Pet_User" ManuallyRouted="false" />
+      <Diagram DiagramId="f36f25ea0c6d4ef68382c0f4256b0ea7" Name="Diagram1">
+        <EntityTypeShape EntityType="CatDogModel.Pet" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatDogModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatDogModel.User" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
+        <AssociationConnector Association="CatDogModel.FK_Pet_User" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

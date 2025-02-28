@@ -14,7 +14,7 @@ namespace RuslanZinnatullin422_CatDog
     /// </summary>
     public partial class App : Application
     {
-        public static RuslanZinnatullin422_CatDogEntities db = new RuslanZinnatullin422_CatDogEntities();
+        public static CatDogEntities db = new CatDogEntities();
         public static MainWindow main;
         public static int id_user;
     }

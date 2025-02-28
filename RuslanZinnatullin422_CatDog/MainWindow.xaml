@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RuslanZinnatullin422_CatDog"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="CatDog" Height="450" Width="800">
     <Grid>
         <Frame Name="myframe"></Frame>
     </Grid>

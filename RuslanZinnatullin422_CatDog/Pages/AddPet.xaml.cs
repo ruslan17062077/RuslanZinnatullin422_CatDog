@@ -63,7 +63,7 @@ namespace RuslanZinnatullin422_CatDog.Pages
         }
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            if(bytes.Length > 0 && PetNameComboBox.SelectedIndex != -1)
+            if(bytes != null && PetNameComboBox.SelectedIndex != -1)
             {
                 App.db.Pet.Add(new Pet()
                 {
@@ -86,6 +86,11 @@ namespace RuslanZinnatullin422_CatDog.Pages
 
           
             
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            App.main.myframe.NavigationService.GoBack();
         }
     }
 }

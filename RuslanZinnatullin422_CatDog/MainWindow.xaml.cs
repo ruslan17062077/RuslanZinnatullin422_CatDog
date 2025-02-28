@@ -23,8 +23,9 @@ namespace RuslanZinnatullin422_CatDog
         public MainWindow()
         {
             InitializeComponent();
-            myframe.NavigationService.Navigate(new Pages.AuthorizationPage());
+           
             App.main = this;
+            myframe.NavigationService.Navigate(new Pages.AuthorizationPage());
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿// Создание кода T4 для модели "C:\Users\222108\source\repos\RuslanZinnatullin422_CatDog\RuslanZinnatullin422_CatDog\DataBase\Model1.edmx" включено. 
+﻿// Создание кода T4 для модели "C:\Users\Ruslan\Source\Repos\RuslanZinnatullin422_CatDog\RuslanZinnatullin422_CatDog\DataBase\Model1.edmx" включено. 
 // Чтобы включить формирование кода прежних версий, измените значение свойства "Стратегия создания кода" конструктора
 // на "Legacy ObjectContext". Это свойство доступно в окне "Свойства", если модель
 // открыта в конструкторе.

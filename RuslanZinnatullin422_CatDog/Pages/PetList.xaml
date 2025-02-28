@@ -9,38 +9,74 @@
       Title="PetList">
 
     <Grid>
+        <!-- Определяем строки Grid -->
         <Grid.RowDefinitions>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="23*"/>
+            <!-- Верхняя строка с панелью поиска и кнопкой -->
+            <RowDefinition Height="Auto"/>
+            <!-- Вторая строка для списка -->
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal">
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Margin="10 10 0 0 ">Поиск</TextBlock>
-                <TextBox MinWidth="100" Margin="10 " Name="poisk" TextChanged="poisk_TextChanged"></TextBox>
-            </StackPanel>
-            <Button Margin="50 5 0 5" Click="Button_Click">Добавить</Button>
-        </StackPanel>
-        <StackPanel Grid.Row="1">
 
-            <ListView x:Name="PsinaData">
-                <ListView.View>
-                    <GridView>
-                        <!-- Колонка для фотографии -->
-                        <GridViewColumn Header="Фото">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <Image Source="{Binding img}" Width="50" Height="50" />
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
-                        <!-- Колонка для имени -->
-                        <GridViewColumn Header="Имя" DisplayMemberBinding="{Binding Name}" />
-                        <!-- Колонка для описания -->
-                        <GridViewColumn Header="Описание" DisplayMemberBinding="{Binding Description}" />
-                    </GridView>
-                </ListView.View>
-            </ListView>
-        </StackPanel>
+        <!-- Верхняя панель (поиск + кнопка "Добавить") -->
+        <Grid Margin="10"
+          VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <!-- Для метки "Поиск:" -->
+                <ColumnDefinition Width="200"/>
+                <!-- Поле для TextBox -->
+                <ColumnDefinition Width="*"/>
+                <!-- Пустое пространство, чтобы "растянуть" -->
+                <ColumnDefinition Width="Auto"/>
+                <!-- Для кнопки "Добавить" -->
+            </Grid.ColumnDefinitions>
 
+            <!-- Метка "Поиск" -->
+            <TextBlock Text="Поиск:"
+                   VerticalAlignment="Center"
+                   Margin="0,0,5,0"/>
+
+            <!-- Поле ввода для поиска -->
+            <TextBox x:Name="poisk"
+                 Grid.Column="1"
+                 VerticalAlignment="Center"
+                 Margin="0,0,10,0"
+                 TextChanged="poisk_TextChanged"/>
+
+            <!-- Кнопка "Добавить" (справа) -->
+            <Button x:Name="AddBtn"
+                Grid.Column="3"
+                Content="Добавить"
+                Margin="0"
+                VerticalAlignment="Center"
+                Click="Button_Click"/>
+        </Grid>
+
+        <!-- Список -->
+        <ListView x:Name="PsinaData"
+              Grid.Row="1"
+              Margin="10">
+            <ListView.View>
+                <GridView>
+                    <!-- Колонка Фото -->
+                    <GridViewColumn Header="Фото">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding img}" 
+                                   Width="50" 
+                                   Height="50" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <!-- Колонка Имя -->
+                    <GridViewColumn Header="Имя" 
+                                DisplayMemberBinding="{Binding Name}" />
+                    <!-- Колонка Описание -->
+                    <GridViewColumn Header="Описание" 
+                                DisplayMemberBinding="{Binding Description}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
+
 </Page>
