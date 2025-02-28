@@ -22,14 +22,24 @@
         </StackPanel>
         <StackPanel Grid.Row="1">
 
-            <DataGrid x:Name="PsinaData">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Binding="{Binding img}"></DataGridTextColumn>
-                    <DataGridTextColumn Binding="{Binding Name}"></DataGridTextColumn>
-                    <DataGridTextColumn Binding="{Binding Description}"></DataGridTextColumn>
-                    
-                </DataGrid.Columns>
-            </DataGrid>
+            <ListView x:Name="PsinaData">
+                <ListView.View>
+                    <GridView>
+                        <!-- Колонка для фотографии -->
+                        <GridViewColumn Header="Фото">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Image Source="{Binding img}" Width="50" Height="50" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <!-- Колонка для имени -->
+                        <GridViewColumn Header="Имя" DisplayMemberBinding="{Binding Name}" />
+                        <!-- Колонка для описания -->
+                        <GridViewColumn Header="Описание" DisplayMemberBinding="{Binding Description}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
         </StackPanel>
 
     </Grid>

@@ -37,18 +37,18 @@ namespace RuslanZinnatullin422_CatDog.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            App.main.myframe.NavigationService.Navigate(new Pages.AddPet());
         }
         public void Poisk()
         {
             if (poisk.Text.Length != 0)
             {
                 PsinaData.ItemsSource = null;
-                PsinaData.ItemsSource = App.db.Pet.Where(x => x.Description.ToLower().Contains(poisk.Text.ToLower())).ToList();
+                PsinaData.ItemsSource = App.db.Pet.Where(x => x.Description.ToLower().Contains(poisk.Text.ToLower()) && x.IdUser == App.id_user).ToList();
             }
             else
             {
-                PsinaData.ItemsSource = App.db.Pet.ToList();
+                PsinaData.ItemsSource = App.db.Pet.Where(x => x.IdUser == App.id_user).ToList();
             }
         }
     }
